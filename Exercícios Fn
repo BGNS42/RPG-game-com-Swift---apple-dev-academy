@@ -1,0 +1,382 @@
+//EXERCICIO 1 - DANO
+
+// DANO = PODERATAQUE * MULT
+
+//let input1 = readLine()
+//let input2 = readLine()
+//var dano = 0
+//var mult = 0
+//
+//if let i1 = input1, let i2 = input2 {
+//    dano = Int(i1) ?? 0
+//    mult = Int(i2) ?? 1
+//}
+//
+//func checkDano(poder: Int, mult: Int) -> Int {
+//    return poder * mult
+//}
+//
+//let result = checkDano(poder: dano, mult: mult)
+//print("Dano causado: \(result)")
+
+////RECURSSAO
+//func inputDano() -> Int {
+//    var dano = 0
+//    if let input = readLine() {
+//        dano = Int(input) ?? 0
+//        if dano > 1000 || dano < 1 {
+//            return inputDano()
+//        }
+//    }
+//    return dano
+//}
+////let dano = Int(readLine() ?? "0") ?? 0
+//let dano = inputDano()
+//print(dano)
+
+// EXERCICIO 2 - PÓS
+//func inputVida() -> Int {
+//    var vida = 0
+//    if let input = readLine() {
+//        vida = Int(input) ?? 0
+//        if vida > 1000 || vida < 1 {
+//            return inputVida()
+//        }
+//    }
+//    return vida
+//}
+//
+//func inputDano() -> Int {
+//    var dano = 0
+//    if let input = readLine() {
+//        dano = Int(input) ?? 0
+//        if dano > 1000 || dano < 0 {
+//            return inputDano()
+//        }
+//    }
+//    return dano
+//}
+//
+//let vida = inputVida()
+//let dano = inputDano()
+//
+//func calcularDano(_ vida: Int, _ dano: Int) -> Int {
+//    return vida - dano
+//}
+//
+//let resultado = calcularDano(vida, dano)
+//if resultado < 0 {
+//    print("Personagem derrotado")
+//} else {
+//    print("Vida restante: \(resultado)")
+//}
+
+// EXERCICIO 3 - XP
+//func inputInimigo() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 100 && dado < 0 {
+//            return inputInimigo()
+//        }
+//    }
+//    return dado
+//}
+//
+//func inputExp() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 100 && dado < 0 {
+//            return inputExp()
+//        }
+//    }
+//    return dado
+//}
+//
+//
+//func inputDificuldade() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 500 && dado < 0 {
+//            return inputDificuldade()
+//        }
+//    }
+//    return dado
+//}
+//
+//func calcExp(_ inimigos: Int, _ exp: Int, _ dificuldade: Int) -> Int {
+//    let expRecebida = (inimigos * exp) + dificuldade
+//    return expRecebida
+//}
+//
+//func printResult() {
+//    let inimigo = inputInimigo()
+//    let exp = inputExp()
+//    let dificuldade = inputDificuldade()
+//    let result = calcExp(inimigo, exp, dificuldade)
+//    print("Experiencia ganha: \(result)")
+//}
+//
+//printResult()
+
+
+//EXERCICIO 4 - STATS
+//func organizer() -> String {
+//    let nomeHeroi = readLine() ?? " "
+//    let stats = readLine() ?? " "
+//    let stats2 = stats.split(separator: " ")
+//    
+//    var listaStats = [Int]()
+//    for i in stats2 {
+//        listaStats.append(Int(i) ?? 0)
+//    }
+//    
+//    return "Heroi: \(nomeHeroi) - Vida: \(listaStats[0]), Mana: \(listaStats[1]), Forca: \(listaStats[2])"
+//}
+//
+//
+//print(organizer())
+
+//EXERCICIO 5 - RESULTADO
+//func inputNv() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 50 && dado < 0 {
+//            return inputNv()
+//        }
+//    }
+//    return dado
+//}
+//
+//func resultadoBatalha() -> String {
+//    let inimigo = readLine() ?? ""
+//    let nv = inputNv()
+//    
+//    let xp = nv * 10
+//    let moedas = nv * 5
+//    
+//    return "Venceu \(inimigo)! Ganhou \(xp) XP e \(moedas) moedas"
+//}
+//
+//print(resultadoBatalha())
+
+//EXERCICIO 6 - LEVEL
+//func inputNv() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 100 && dado < 0 {
+//            return inputNv()
+//        }
+//    }
+//    return dado
+//}
+//
+//func inputExp() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 10000 && dado < 0 {
+//            return inputExp()
+//        }
+//    }
+//    return dado
+//}
+//
+//func levelUp() -> String {
+//    let nv = inputNv()
+//    let exp = inputExp()
+//    
+//    let expLevelUp = nv * 100
+//    
+//    if exp >= expLevelUp {
+//        return "Pode subir para o nivel \(nv+1)!"
+//    } else {
+//        return "Precisa de \(expLevelUp - exp) XP para subir de nivel"
+//    }
+//}
+//
+//print(levelUp())
+
+//EXERCICIO 7 - CURA
+//func inputVidaAtual() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 1000 && dado < 0 {
+//            return inputVidaAtual()
+//        }
+//    }
+//    return dado
+//}
+//
+//func inputVidaMax(_ vidaAtual:Int) -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 1000 && dado < vidaAtual {
+//            return inputVidaMax(vidaAtual)
+//        }
+//    }
+//    return dado
+//}
+//
+//func inputCura() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//        if dado > 500 && dado < 0 {
+//            return inputCura()
+//        }
+//    }
+//    return dado
+//}
+//
+//func calcularCura() -> String {
+//    let vidaAtual = inputVidaAtual()
+//    let vidaMax = inputVidaMax(vidaAtual)
+//    let cura = inputCura()
+//    var vidaCurada = 0
+//    if cura == 0 {
+//        vidaCurada = 50
+//    } else if cura > 0 {
+//        vidaCurada = cura
+//    }
+//
+//    var novaVida = vidaAtual + vidaCurada
+//    if novaVida > vidaMax {
+//        novaVida = vidaMax
+//    }
+//
+//    return "Vida apos pocao: \(novaVida)"
+//}
+//
+//print(calcularCura())
+
+////EXERCICIO 8 - EQUIPAMENTO
+//var linha1 = [Int]()
+//var linha2 = [Int]()
+//
+//func getInputs() -> Array<Int> {
+//    let input = readLine() ?? "None"
+//    let separated = input.split(separator: " ")
+//    
+//    return [Int(separated[0]) ?? 0, Int(separated[1]) ?? 0]
+//}
+//
+//linha1 = getInputs()
+//linha2 = getInputs()
+//
+//enum EquipamentoError: Error {
+//    case nivel, forca
+//}
+//
+//func validando(_ linha1: Array<Int>, _ linha2: Array<Int>) throws -> String {
+//    if linha1[0] < linha2[0] {
+//        throw EquipamentoError.nivel
+//    } else if linha1[1] < linha2[1] {
+//        throw EquipamentoError.forca
+//    } else {
+//        return "Equipamento validado com sucesso"
+//    }
+//}
+//
+//do {
+//    let _ = try validando(linha1, linha2)
+//    print("Equipamento validado com sucesso")
+//} catch EquipamentoError.nivel {
+//    print("Erro: Nivel insuficiente")
+//} catch EquipamentoError.forca {
+//    print("Erro: Forca insuficiente")
+//}x
+
+
+////EXERCICIO 9 - EPICA
+//func getInputs() -> Array<Int> {
+//    let input = readLine() ?? "None"
+//    let separated = input.split(separator: " ")
+//
+//    return [Int(separated[0]) ?? 0, Int(separated[1]) ?? 0, Int(separated[2]) ?? 0]
+//}
+//
+//enum rpgError: Error {
+//    case nivel, exp, ouro
+//}
+//
+//func validando() throws -> String {
+//    let linha = getInputs()
+//    if linha[0] < 20 {
+//        throw rpgError.nivel
+//    } else if linha[1] < 5 {
+//        throw rpgError.exp
+//    } else if linha[2] < 1000 {
+//        throw rpgError.ouro
+//    } else {
+//        return "Missao epica aceita! Boa sorte, heroi!"
+//    }
+//}
+//
+//do {
+//    let _ = try validando()
+//    print("Missao epica aceita! Boa sorte, heroi!")
+//} catch rpgError.nivel {
+//    print("Erro: Nivel minimo nao atingido")
+//} catch rpgError.exp {
+//    print("Erro: Experiencia insuficiente em missoes")
+//} catch rpgError.ouro {
+//    print("Erro: Ouro insuficiente")
+//}
+
+
+//EXERCICIO 10 - BATALHA COMPLETO
+//func getInput() -> Int {
+//    var dado = 0
+//    if let input = readLine() {
+//        dado = Int(input) ?? 1
+//    }
+//    return dado
+//}
+//
+//func danoHeroi(_ forcaHeroi: Int) -> Int {
+//    return forcaHeroi * 2
+//}
+//
+//func danoMonstro(_ forcaMonstro: Int) -> Int {
+//    return forcaMonstro * 2
+//}
+//
+//enum battleError: Error {
+//    case fraco
+//}
+//
+//func batalha() throws -> String {
+//    let nivelHeroi = getInput()
+//    let forcaHeroi = getInput()
+//    let nivelMonstro = getInput()
+//    let forcaMonstro = getInput()
+//    
+//    if nivelHeroi < (nivelMonstro / 2) {
+//        throw battleError.fraco
+//    }
+//    
+//    let danoHeroi = danoHeroi(forcaHeroi)
+//    let danoMonstro = danoMonstro(forcaMonstro)
+//    var resultado = ""
+//    if danoHeroi > danoMonstro || danoHeroi == danoMonstro {
+//        resultado = "Vitoria! Dano causado: \(danoHeroi), Dano recebido: \(danoMonstro), Recompensas: \(nivelMonstro * 50) XP e \(nivelMonstro * 20) moedas"
+//    } else {
+//        resultado = "Derrota! Dano causado: \(danoHeroi), Dano recebido: \(danoMonstro)"
+//    }
+//    
+//    return resultado
+//}
+//
+//do {
+//    let result = try batalha()
+//    print(result)
+//} catch battleError.fraco {
+//    print("Erro: Heroi muito fraco para esta batalha")
+//}
