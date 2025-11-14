@@ -15,3 +15,12 @@ Abra o arquivo no Xcode ou acesse [Programiz - editor de codigo swift online](ht
 [Link direto para o editor online com o código nele](https://www.programiz.com/online-compiler/3Z2x2fDX6c4GA)
 
 O jogo roda todo em terminal, com interacoes e sistema de batalha.
+
+## Aprendizado
+- funcoes
+- dicionarios
+- lacos de repeticao
+- if...else
+- tipos de dado
+- recursao
+
